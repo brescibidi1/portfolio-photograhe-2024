@@ -53,7 +53,7 @@
                 <div class="container-content flex w-full overflow-hidden max-h-[710px]">
                     <div class="artist-presentation-image-box flex-1 rounded-xl overflow-hidden">
                         <NuxtImg
-                            src="/photos/artist.jpeg" alt="Artist presentation image"
+                            src="/photos/artist.webp" alt="Artist presentation image"
                             class="w-full h-full object-cover" />
                     </div>
 

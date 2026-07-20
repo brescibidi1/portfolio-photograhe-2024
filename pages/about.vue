@@ -61,7 +61,7 @@
                             {{ $t('root.pages.about.content.journey.heading-pre-text') }}
                         </span>
                         <h2 class="--text-p-viewable-med">
-                            {{ $t('root.pages.about.content.journey.heading-text', { firstname: 'Prénom' }) }}
+                            {{ $t('root.pages.about.content.journey.heading-text', { firstname: 'John' }) }}
                         </h2>
                     </div>
                 </div>

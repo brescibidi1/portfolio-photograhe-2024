@@ -19,7 +19,7 @@
 
 <script lang="ts" setup>
 defineProps({
-    mediaName: { type: String, default: '/image-16.jpeg'},
+    mediaName: { type: String, default: '/image-16.webp'},
     mediaAlt: { type: String, default: 'portfolio-media'},
     mediaTitle: { type: String, required: true },
     mediaDate: { type: String, required: true },

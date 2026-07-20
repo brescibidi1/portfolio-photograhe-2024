@@ -19,7 +19,7 @@
 
                     <div class="stylish-background-block overflow-hidden relative">
                         <div class="image-wrapper">
-                            <NuxtImg src="/photos/contact.jpeg" alt="artist-contact-thank-you-with-hands-img" class="" />
+                            <NuxtImg src="/photos/contact.webp" alt="artist-contact-thank-you-with-hands-img" class="" />
 
                             <div class="overlay-text bottom-0 width-[320px] z-3 absolute py-6">
                                 <p class="uppercase">
