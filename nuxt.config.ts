@@ -12,7 +12,7 @@ export default defineNuxtConfig({
     '@unocss/nuxt',
     'nuxt-swiper',
   ],
-  css: ['@/assets/styles/app.scss'],
+  css: ['@/assets/styles/app.css'],
   fonts: {
     defaults: {
       weights: [100, 200, 300, 400, 500, 600, 700, 800, 900],
