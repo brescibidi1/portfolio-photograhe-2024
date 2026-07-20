@@ -1,0 +1,132 @@
+{
+  "root": {
+    "navlinks": {
+      "home": "Reception",
+      "about": "About",
+      "portfolio": "Portfolio",
+      "contact": "Contact"
+    },
+    "pages": {
+      "home": {
+        "content": {
+          "hero": {
+            "sub-text": "Stunning Photography by",
+            "sub-content": {
+              "pre-text": "Let's",
+              "post-text": "work together"
+            }
+          },
+          "about": {
+            "heading-pre-text": "About",
+            "heading-text": "I am {name}",
+            "bio": {
+              "title": "Introduction",
+              "text": "I'm passionate about images and the feeling they give off. I've decided to make it my full-time profession in 2019. Field experience has taught me to capture the present moment. Both photography and video are universal languages that allow us to exchange ideas all over the world. What I appreciate most in my job is that a project can speak for itself through an image alone."
+            },
+            "contact": {
+              "title": "Contact Information",
+              "email-title": "E-mail",
+              "phone-number-title": "Phone number"
+            }
+          },
+          "portfolio": {
+            "heading-pre-text": "Portfolio",
+            "heading-text": "Explore my work."
+          }
+        }
+      },
+      "about": {
+        "content": {
+          "journey": {
+            "heading-pre-text": "Journey",
+            "heading-text": "{firstname}'s journey - a timeline",
+            "timeline": {
+              "step-1": {
+                "title": "Year - {year}",
+                "text": ""
+              },
+              "step-2": {
+                "title": "Year - {year}",
+                "text": ""
+              },
+              "step-3": {
+                "title": "Year - {year}",
+                "text": ""
+              },
+              "step-4": {
+                "title": "Year - {year}",
+                "text": ""
+              },
+              "step-5": {
+                "title": "Year - {year}",
+                "text": ""
+              },
+              "step-6": {
+                "title": "Year - {year}",
+                "text": ""
+              }
+            }
+          },
+          "main": {
+            "title": "About {name}",
+            "overlay-text": "Scroll down to see my journey",
+            "stat-1": "Years of experience",
+            "stat-2": "Satisfied customers",
+            "stat-3": "Diplômes professionnels",
+            "stat-4": "International shoots",
+            "stat-5": "Suscribers on my social networks",
+            "stat-6": "Customers retention rate"
+          },
+          "bio": {
+            "title": "My biography",
+            "text": "Cynthia's story with photography began in 2016, when she acquired her first camera. This step marked the beginning of an exciting journey through the lens, inspired by her desire to capture life's fleeting moments and raw emotions. \n Over the years, Cynthia has honed her craft by exploring diverse landscapes and immortalizing precious moments, whether at lively festivals, vibrant concerts or in the heart of nature. Her experiences in digital media, combined with constant freelance practice, have enabled her to develop a unique visual signature, combining sensitivity and technical mastery.\n But for Cynthia, photography is more than just a craft: it's a powerful way of telling stories. Every shot is an opportunity to reveal the hidden beauty of everyday life, to celebrate the diversity of cultures and to freeze timeless memories. In 2024, after nearly 8 years of dedication to her art, Cynthia continues to sublimate the world around her, blending creativity and emotion in each of her projects."
+          }
+        }
+      },
+      "portfolio": {
+        "content": {
+          "main": {
+            "title": "Visual poetry in pixels",
+            "text": "Step into a visual journey that encapsulates the essence of my lens. Each photograph in this portfolio is a narrative, a frozen moment in time, and a testament to the artistry and passion poured into every frame. Explore the diverse tapestry of stories I've had the privilege to capture and witness the world through my lens.",
+            "overlay-text": "Scroll down to see the works",
+            "text-2": "Brands i have worked with"
+          }
+        }
+      },
+      "contact": {
+        "content": {
+          "main": {
+            "pre-text": "Contact",
+            "title": "Get in touch with me",
+            "text": " Enter a world of timeless photography with {name}. Explore my photographic works, each designed to tell a unique story through captivating images. Whether it's the magic of portraits, the emotion of events or the appeal of a commercial, I'm here to bring your vision to life.",
+            "overlay-text": " Scroll down to send me a message",
+            "pre-form": {
+              "text": "Please feel free to contact me through a variety of channels. I'm available by phone, email and social media for your convenience."
+            }
+          }
+        }
+      }
+    },
+    "buttons": {
+      "know-more": "Know More",
+      "lets-work": "Let's work",
+      "view-all": "See everything"
+    },
+    "footer": {
+      "copyrright-text-rights-reserved": "All rights reserved.",
+      "content": {
+        "text": "A more significant home for photography"
+      },
+      "links": {
+        "quick-links": "Quick links"
+      }
+    },
+    "my-portfolio-categories": {
+      "catg-1": "",
+      "catg-2": "",
+      "catg-3": "",
+      "catg-4": "",
+      "catg-5": ""
+    }
+  }
+}

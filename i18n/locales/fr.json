@@ -1,0 +1,132 @@
+{
+  "root": {
+    "navlinks": {
+      "home": "Acceuil",
+      "about": "À propos",
+      "portfolio": "Portfolio",
+      "contact": "Contact"
+    },
+    "pages": {
+      "home": {
+        "content": {
+          "hero": {
+            "sub-text": "Des photographies époustouflantes prises par",
+            "sub-content": {
+              "pre-text": "Nous allons",
+              "post-text": "collaborer"
+            }
+          },
+          "about": {
+            "heading-pre-text": "À propos",
+            "heading-text": "Je suis {name}",
+            "bio": {
+              "title": "Introduction",
+              "text": "Passionnée par l’image et par le sentiment qui s’en dégage. J’ai décidé d’en faire mon métier à temps plein en 2019. L’ épreuve du terrain m’a formé à capturer l’instant présent. La photographie comme la vidéo sont des languages universels qui permettent  d’échanger dans le monde entier. Ce que j’apprécie le plus dans mon métier, c’est qu’un projet puisse parler de lui-même rien qu’à travers une image."
+            },
+            "contact": {
+              "title": "Information de contact",
+              "email-title": "Email",
+              "phone-number-title": "Numéro de téléphone"
+            }
+          },
+          "portfolio": {
+            "heading-pre-text": "Portfolio",
+            "heading-text": "Explorez mon travail."
+          }
+        }
+      },
+      "about": {
+        "content": {
+          "journey": {
+            "heading-pre-text": "Parcours",
+            "heading-text": "Le parcours de {firstname} - une chronologie",
+            "timeline": {
+              "step-1": {
+                "title": "Année - {year}",
+                "text": ""
+              },
+              "step-2": {
+                "title": "Année - {year}",
+                "text": ""
+              },
+              "step-3": {
+                "title": "Année - {year}",
+                "text": ""
+              },
+              "step-4": {
+                "title": "Année - {year}",
+                "text": ""
+              },
+              "step-5": {
+                "title": "Année - {year}",
+                "text": ""
+              },
+              "step-6": {
+                "title": "Année - {year}",
+                "text": ""
+              }
+            }
+          },
+          "main": {
+            "title": "À propos de {name}",
+            "overlay-text": "Défiler vers le bas pour voir mon parcours",
+            "stat-1": "Années d'expérience",
+            "stat-2": "Clients satisfaits",
+            "stat-3": "Diplômes professionnels",
+            "stat-4": "Tournages/shooting internationaux",
+            "stat-5": "Abonnés sur mes réseaux sociaux",
+            "stat-6": "Taux de rétention des clients"
+          },
+          "bio": {
+            "title": "Ma biographie",
+            "text": "L’histoire de Cynthia avec la photographie commence en 2016, lorsqu’elle acquiert son premier appareil photo. Cette étape marque le début d’un voyage passionnant à travers l’objectif, inspiré par son désir de capturer les instants fugaces de la vie et les émotions brutes. \n Au fil des années, Cynthia a perfectionné son art en explorant des paysages divers et en immortalisant des moments précieux, que ce soit dans des festivals animés, des concerts vibrants ou au cœur de la nature. Ses expériences dans les médias numériques, combinées à une pratique constante en freelance, lui ont permis de développer une signature visuelle unique, alliant sensibilité et maîtrise technique.\n Mais pour Cynthia, la photographie n’est pas qu’un simple métier : c’est un moyen puissant de raconter des histoires. Chaque cliché est une opportunité de révéler la beauté cachée du quotidien, de célébrer la diversité des cultures et de figer des souvenirs intemporels. En 2024, après près de 8 ans de dévouement à son art, Cynthia continue de sublimer le monde qui l’entoure, mêlant créativité et émotion dans chacun de ses projets."
+          }
+        }
+      },
+      "portfolio": {
+        "content": {
+          "main": {
+            "title": "Poésie visuelle en pixels",
+            "text": "Entrez dans un voyage visuel qui résume l'essence de mon objectif. Chaque photographie de ce portfolio est un récit, un moment figé dans le temps et un témoignage de l'art et de la passion mis dans chaque image. Explorez la diversité des histoires que j'ai eu le privilège de capturer et découvrez le monde à travers mon objectif.",
+            "overlay-text": "Faites défiler vers le bas pour voir mes œuvres",
+            "text-2": "Les marques avec lesquelles j'ai collaborer"
+          }
+        }
+      },
+      "contact": {
+        "content": {
+          "main": {
+            "pre-text": "Contact",
+            "title": "Prenez contact avec moi",
+            "text": " Entrez dans un monde de photographie intemporelle avec {name}. Explorez mes oeuvres photographiques, chacune conçue pour raconter une histoire unique à travers des images captivantes. Qu'il s'agisse de la magie des portraits, de l'émotion des événements ou de l'attrait de d'un reportage publicitaire, je suis là pour donner vie à votre vision.",
+            "overlay-text": " Défilez vers le bas pour m'envoyer un message",
+            "pre-form": {
+              "text": "N'hésitez pas à me contacter par le biais de différents canaux. Je suis disponible par téléphone, par courriel et par les médias sociaux pour votre commodité."
+            }
+          }
+        }
+      }
+    },
+    "buttons": {
+      "know-more": "Apprendre plus",
+      "lets-work": "Collaborons",
+      "view-all": "Voir tout"
+    },
+    "footer": {
+      "copyrright-text-rights-reserved": "Tous droits réservés.",
+      "content": {
+        "text": "Un foyer plus significatif pour la photographie"
+      },
+      "links": {
+        "quick-links": "Liens rapides"
+      }
+    },
+    "my-portfolio-categories": {
+      "catg-1": "Portraits",
+      "catg-2": "Événements & Concerts",
+      "catg-3": "Voyages & Paysages",
+      "catg-4": "Mode & Editoral",
+      "catg-5": "Urbain & Architecture"
+    }
+  }
+}
