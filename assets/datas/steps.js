@@ -1,10 +1,10 @@
 export const steps = [
-    { title: 'root.pages.about.content.journey.timeline.step-1.title', text: 'root.pages.about.content.bio.timeline.step-1.text', year: '2025' },
-    { title: 'root.pages.about.content.journey.timeline.step-1.title', text: 'root.pages.about.content.bio.timeline.step-2.text', year: '2024' },
-    { title: 'root.pages.about.content.journey.timeline.step-1.title', text: 'root.pages.about.content.bio.timeline.step-3.text', year: '2023' },
-    { title: 'root.pages.about.content.journey.timeline.step-1.title', text: 'root.pages.about.content.bio.timeline.step-4.text', year: '2022' },
-    { title: 'root.pages.about.content.journey.timeline.step-1.title', text: 'root.pages.about.content.bio.timeline.step-5.text', year: '2021' },
-    { title: 'root.pages.about.content.journey.timeline.step-1.title', text: 'root.pages.about.content.bio.timeline.step-6.text', year: '2020' }
+    { title: 'root.pages.about.content.journey.timeline.step-1.title', year: '2025' },
+    { title: 'root.pages.about.content.journey.timeline.step-1.title', year: '2024' },
+    { title: 'root.pages.about.content.journey.timeline.step-1.title', year: '2023' },
+    { title: 'root.pages.about.content.journey.timeline.step-1.title', year: '2022' },
+    { title: 'root.pages.about.content.journey.timeline.step-1.title', year: '2021' },
+    { title: 'root.pages.about.content.journey.timeline.step-1.title', year: '2020' }
 ]
 
 export const stats = [

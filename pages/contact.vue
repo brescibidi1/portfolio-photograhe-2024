@@ -19,7 +19,7 @@
 
                     <div class="stylish-background-block overflow-hidden relative">
                         <div class="image-wrapper">
-                            <NuxtImg src="/photos/contact.webp" alt="artist-contact-thank-you-with-hands-img" class="" />
+                            <img src="/photos/contact.webp" alt="artist-contact-thank-you-with-hands-img" class="" />
 
                             <div class="overlay-text bottom-0 width-[320px] z-3 absolute py-6">
                                 <p class="uppercase">
@@ -37,19 +37,25 @@
                             </p>
                             <p>{{ $t('root.pages.contact.content.main.pre-form.text') }}</p>
                         </div>
-                        <div class="right-element flex-wrap">
+                        <div class="right-element flex-wrap"><p class="demo-coordinates-note">{{ copy.contact }}</p>
                             <div class="element-content relative flex items-baseline">
-                                <a href="tel:+1234567890">+12 34 56 78 90</a>
+                                <span>+00 00 00 00 00</span>
                                 <Icon name="ri-arrow-right-up-line" size="1.125rem" />
                             </div>
                             <div class="element-content relative flex items-baseline">
-                                <a href="mailto:example@example.com">exemple@exemple.com</a>
+                                <span>hello@example.com</span>
                                 <Icon name="ri-arrow-right-up-line" size="1.125rem" />
                             </div>
                         </div>
                     </div>
                     <div class="element-block w-full contact-form-block items-center relative py-5rem justify-between flex">
-                        <div class="flex form-container flex-col w-full" />
+                        <form class="demo-form" @submit.prevent="simulate">
+                            <h2>{{ copy.formTitle }}</h2><p id="demo-form-hint">{{ copy.formHint }}</p>
+                            <div class="demo-form-grid"><label for="demo-name">{{ copy.name }}<input id="demo-name" v-model="form.name" required maxlength="120" autocomplete="off" aria-describedby="demo-form-hint" /></label><label for="demo-email">{{ copy.email }}<input id="demo-email" v-model="form.email" type="email" required maxlength="254" autocomplete="off" /></label></div>
+                            <label for="demo-message">{{ copy.message }}<textarea id="demo-message" v-model="form.message" required maxlength="3000" /></label>
+                            <UiButton :is-link="false" type="submit" class-name="purpy">{{ copy.send }}</UiButton>
+                            <p v-if="sent" role="status">{{ copy.success }}</p>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -57,7 +63,11 @@
     </div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const copy = useDemoCopy(), form = reactive({ name:'', email:'', message:'' }), sent = ref(false);
+function simulate() { if (!form.name.trim() || !form.email.trim() || !form.message.trim()) return; sent.value = true; }
+watch(form, () => { sent.value = false; });
+</script>
 
 <style lang="scss" scoped>
 .page-main {

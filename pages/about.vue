@@ -32,7 +32,7 @@
 
                     <div class="stylish-background-block overflow-hidden relative">
                         <div class="image-wrapper">
-                            <NuxtImg src="/photos/mountains_sunset.webp" alt="artist-about-paysage-img" class="" />
+                            <img src="/photos/mountains_sunset.webp" alt="artist-about-paysage-img" class="" />
 
                             <div class="overlay-text bottom-0 width-[320px] z-3 absolute py-6">
                                 <p class="uppercase">
@@ -71,7 +71,7 @@
                             v-for="(step, index) in steps"
                             :key="index"
                             :step-title="$t(step.title, { year: step.year })"
-                            :step-text="step.text"
+                            :step-text="copy.timeline[index]"
                         />
                     </ul>
                 </div>
@@ -81,6 +81,7 @@
 </template>
 
 <script lang="ts" setup>
+const copy = useDemoCopy();
 import { steps, stats } from '~/assets/datas/steps'
 </script>
 

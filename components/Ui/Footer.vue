@@ -62,6 +62,7 @@
                         </div> -->
                     </div>
                 </div>
+                <p class="demo-credit">{{ copy.credit }} · <a href="https://www.figma.com/design/mDomeEmARSbp06uMwPbA55/Photographer-Portfolio-Website-UI-Template---Dark-Theme-%7C-Produce-UI--Community-" target="_blank" rel="noopener noreferrer">Design : Produce UI ↗</a></p>
                 <div class="copyright-line items-center flex justify-between w-full">
                     <UiSocialsLink />
 
@@ -75,6 +76,7 @@
 </template>
 
 <script lang="ts" setup>
+const copy = useDemoCopy();
 const currentYear = new Date().getFullYear()
 </script>
 

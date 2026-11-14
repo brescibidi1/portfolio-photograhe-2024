@@ -5,29 +5,24 @@ export default defineNuxtConfig({
 
   modules: [
     '@nuxt/eslint',
-    '@nuxt/fonts',
     '@nuxt/icon',
     '@nuxt/image',
     '@nuxtjs/i18n',
     '@unocss/nuxt',
     'nuxt-swiper',
   ],
-  css: ['@/assets/styles/app.css'],
-  fonts: {
-    defaults: {
-      weights: [100, 200, 300, 400, 500, 600, 700, 800, 900],
-      styles: ['normal'],
-    },
-  }
-  ,i18n: {
+  css: ['@/assets/styles/app.css', '@/assets/styles/demo.css'],
+  routeRules: { '/**': { headers: { 'X-Robots-Tag': 'noindex, follow' } } },
+  nitro: { prerender: { routes: ['/', '/about', '/portfolio', '/contact', '/en', '/en/about', '/en/portfolio', '/en/contact'], failOnError: true } },
+  icon: { serverBundle: { collections: ['ri'] } },
+  i18n: {
     customRoutes: 'config',
     debug: false,
-    baseUrl: 'https://example.com',
-    langDir: 'locales',
+    vueI18n: './i18n.config.ts',
     defaultLocale: 'fr',
     locales: [
-      { code: 'en', name: 'English', file: 'en.json' },
-      { code: 'fr', name: 'Français', file: 'fr.json' },
+      { code: 'en', name: 'English' },
+      { code: 'fr', name: 'Français' },
     ],
   },
 })

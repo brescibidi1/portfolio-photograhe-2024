@@ -1,5 +1,6 @@
 <template>
     <div class="content">
+        <UiDemoNotice />
         <UiNavbar />
         <NuxtPage />
         <UiFooter />

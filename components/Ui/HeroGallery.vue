@@ -2,7 +2,7 @@
     <div class="gallery-hero-section">
         <div class="pictures-container grid relative w-full h-[512px] max-w-[90vw]">
             <div v-for="(image, index) in imagesUrl" :key="index" :class="['column relative', image.class]">
-                <NuxtImg :src="image.src" alt="Gallery Image" :class="''" />
+                <img :src="image.src" :alt="`Photo de démonstration ${index + 1}`" decoding="async" :class="''" />
             </div>
         </div>
     </div>
@@ -159,4 +159,6 @@ const imagesUrl = [
         }
     }
 }
+</style>
+<style scoped>@media(max-width:490px){.gallery-hero-section .pictures-container{height:clamp(240px,72vw,360px)}}
 </style>

@@ -19,7 +19,7 @@
 
                     <div class="stylish-background-block overflow-hidden relative">
                         <div class="image-wrapper">
-                            <NuxtImg src="/photos/portfolio.webp" alt="artist-about-paysage-img" class="" />
+                            <img src="/photos/portfolio.webp" alt="artist-about-paysage-img" class="" />
 
                             <div class="overlay-text bottom-0 width-[320px] z-3 absolute py-6">
                                 <p class="uppercase">

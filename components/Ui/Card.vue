@@ -1,12 +1,12 @@
 <template>
     <div class="overflow-hidden flex-1 portfolio-element-card w-full flex flex-col">
         <div class="portfolio-media-box flex image-wrapper overflow-hidden">
-            <NuxtImg :src="`/photos/${mediaName}`" :alt="mediaAlt" class="" />
+            <img :src="`/photos/${mediaName}`" :alt="mediaAlt || mediaTitle" loading="lazy" decoding="async" />
         </div>
 
         <div class="media-infos-container flex justify-between items-start">
             <div class="media-title-block flex-col flex w-full">
-                <h3 classe="media-title line-clamp-1">{{ mediaTitle }}</h3>
+                <h3 class="media-title line-clamp-1">{{ mediaTitle }}</h3>
                 <span class="media-addDate">{{ mediaDate }}</span>
             </div>
             <div class="uppercase media-location items-center font-medium relative flex justify-center">
@@ -20,7 +20,7 @@
 <script lang="ts" setup>
 defineProps({
     mediaName: { type: String, default: '/image-16.webp'},
-    mediaAlt: { type: String, default: 'portfolio-media'},
+    mediaAlt: { type: String, default: ''},
     mediaTitle: { type: String, required: true },
     mediaDate: { type: String, required: true },
     mediaLocation: { type: String, required: true },

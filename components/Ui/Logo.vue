@@ -1,7 +1,7 @@
 <template>
     <div class="logo">
         <NuxtLinkLocale to="/" :class="className">
-            <NuxtImg src="/john-doe.svg" alt="template-logo" />
+            <img src="/john-doe.svg" alt="template-logo" />
         </NuxtLinkLocale>
     </div>
 </template>

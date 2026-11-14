@@ -62,18 +62,6 @@ export const portfolioByCategories = [
     slug: 'root.my-portfolio-categories.catg-2',
     items: [
       {
-        file_name: 'concert_stage.webp',
-        media_title: 'Énergie d’un concert live',
-        add_date: 'août 2022',
-        media_location: 'France',
-      },
-      {
-        file_name: 'festival_dance.webp',
-        media_title: 'Danseurs traditionnels en festival',
-        add_date: 'décembre 2021',
-        media_location: 'Bénin',
-      },
-      {
         file_name: 'conference.webp',
         media_title: 'Moment fort d’une conférence',
         add_date: 'mai 2023',

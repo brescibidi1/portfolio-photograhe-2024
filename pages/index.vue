@@ -52,7 +52,7 @@
                 </div>
                 <div class="container-content flex w-full overflow-hidden max-h-[710px]">
                     <div class="artist-presentation-image-box flex-1 rounded-xl overflow-hidden">
-                        <NuxtImg
+                        <img
                             src="/photos/artist.webp" alt="Artist presentation image"
                             class="w-full h-full object-cover" />
                     </div>
@@ -77,13 +77,13 @@
                                     <p class="box-title font-medium">
                                         {{ $t('root.pages.home.content.about.contact.email-title') }}
                                     </p>
-                                    <a href="mailto:exemple@exemple.com"><span>nomprenom@exemple.com</span></a>
+                                    <span>hello@example.com</span>
                                 </li>
                                 <li class="flex-col box w-auto flex">
                                     <p class="box-title font-medium">
                                         {{ $t('root.pages.home.content.about.contact.phone-number-title') }}
                                     </p>
-                                    <a href="tel:"><span>+229 01 12 34 56 78</span></a>
+                                    <span>+00 00 00 00 00</span>
                                 </li>
                             </ul>
                             <div class="flex justify-between artist-socials flex-row">
@@ -117,13 +117,13 @@
                         <div class="buttons-wrapper gap-2 items-center flex justify-center">
                             <button
                                 class="swiper-prev swiper-button h-60px justify-center rounded-full mr-2 flex aspect-square items-center flex"
-                                @click="swiper.prev()"
+                                type="button" :aria-label="copy.previous" @click="swiper.prev()"
                             >
                                 <Icon name="ri-arrow-left-s-line" size="1.5rem" style="color: white" />
                             </button>
                             <button
                                 class="swiper-next swiper-button h-60px justify-center rounded-full mr-2 flex aspect-square items-center flex"
-                                @click="swiper.next()"
+                                type="button" :aria-label="copy.next" @click="swiper.next()"
                             >
                                 <Icon name="ri-arrow-right-s-line" size="1.5rem" style="color: white" />
                             </button>
@@ -137,12 +137,11 @@
                 <div class="container-content flex w-full overflow-hidden relative items-end">
                     <ClientOnly>
                         <swiper-container
-                            ref="containerRef"
-                            class="artist-homepage-portfolio-view grid auto-rows-auto [grid-auto-flow:dense]">
+                            ref="containerRef" :init="false"
+                            class="artist-homepage-portfolio-view">
                             <swiper-slide
                                 v-for="(media, index) in homepagePortfolio"
                                 :key="index"
-                                :init="false"
                             >
                                 <UiCard 
                                     :media-name="media.file_name"
@@ -160,6 +159,7 @@
 </template>
 
 <script setup lang="ts">
+const copy = useDemoCopy();
 import { homepagePortfolio } from '~/assets/datas/portfolio'
 
 const containerRef = ref(null)
@@ -167,6 +167,8 @@ const containerRef = ref(null)
 const swiper = useSwiper(containerRef, {
     slidesPerView: 1,
     spaceBetween: 10,
+    keyboard: { enabled:true, onlyInViewport:true },
+    a11y: { enabled:true },
     breakpoints: {
         640: { slidesPerView: 2, spaceBetween: 20},
         1024: { slidesPerView: 3, spaceBetween: 30},
@@ -174,9 +176,7 @@ const swiper = useSwiper(containerRef, {
     }
 })
 
-onMounted(() => {
-    console.info(swiper.instance)
-})
+
 </script>
 
 <style scoped lang="scss">

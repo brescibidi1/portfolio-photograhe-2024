@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const copy = useDemoCopy();
 defineProps<{
     slug: string
     items: {
@@ -15,6 +16,8 @@ const containerRef = ref(null)
 const swiper = useSwiper(containerRef, {
     slidesPerView: 1,
     spaceBetween: 10,
+    keyboard: { enabled:true, onlyInViewport:true },
+    a11y: { enabled:true },
     breakpoints: {
         640: { slidesPerView: 2, spaceBetween: 20},
         1024: { slidesPerView: 3, spaceBetween: 30},
@@ -39,12 +42,12 @@ const next = () => swiper.next()
                 <div class="buttons-wrapper gap-2 items-center flex justify-center">
                     <button
                         class="swiper-prev swiper-button h-60px justify-center rounded-full mr-2 flex aspect-square items-center flex"
-                        @click="prev">
+                        type="button" :aria-label="copy.previous" @click="prev">
                         <Icon name="ri-arrow-left-s-line" size="1.5rem" style="color: white" />
                     </button>
                     <button
                         class="swiper-next swiper-button h-60px justify-center rounded-full mr-2 flex aspect-square items-center flex"
-                        @click="next">
+                        type="button" :aria-label="copy.next" @click="next">
                         <Icon name="ri-arrow-right-s-line" size="1.5rem" style="color: white" />
                     </button>
                 </div>
@@ -54,12 +57,11 @@ const next = () => swiper.next()
         <!-- Swiper -->
         <ClientOnly>
             <swiper-container 
-                ref="containerRef"
-                class="portfolio-category-container grid auto-rows-auto [grid-auto-flow:dense]">
+                ref="containerRef" :init="false"
+                class="portfolio-category-container">
                 <swiper-slide 
                     v-for="(item, idx) in items" 
                     :key="idx"
-                    :init="false"
                 >
                     <UiCard 
                         :media-name="item.file_name"
@@ -113,3 +115,4 @@ const next = () => swiper.next()
     width: 100%;
 }
 </style>
+<style scoped>swiper-container{display:block;min-width:0;width:100%}swiper-slide{height:auto}</style>

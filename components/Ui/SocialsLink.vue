@@ -1,34 +1,8 @@
-<template>
-    <ul class="items-center flex justify-center">
-        <li class="social-link">
-            <a
-                href="https://www.instagram.com/"
-                class="justify-center flex p-12px rounded-full overflow-hidden items-center cursor-pointer h-60px aspect-square"
-                target="_blank" rel="noopener noreferrer">
-                <Icon name="ri-instagram-line" size="1.25rem" />
-            </a>
-        </li>
-        <li class="social-link">
-            <a 
-                href="https://x.com/"
-                class="justify-center flex p-12px rounded-full overflow-hidden items-center cursor-pointer h-60px aspect-square"
-                target="_blank" rel="noopener noreferrer">
-                <Icon name="ri-twitter-x-line" size="1.25rem" />
-            </a>
-        </li>
-        <li class="social-link">
-            <a 
-                href="https://"
-                class="justify-center flex p-12px rounded-full overflow-hidden items-center cursor-pointer h-60px aspect-square"
-                target="_blank" rel="noopener noreferrer">
-                <Icon name="ri-linkedin-fill" size="1.25rem" />
-            </a>
-        </li>
-    </ul>
-</template>
-
-<script lang="ts" setup></script>
-
+<script setup lang="ts">
+const copy=useDemoCopy(), notice=ref('');
+const socials=[{ name:'Instagram', icon:'ri:instagram-line' },{ name:'X', icon:'ri:twitter-x-line' },{ name:'LinkedIn', icon:'ri:linkedin-fill' }];
+</script>
+<template><div class="demo-socials"><ul class="items-center flex justify-center"><li v-for="social in socials" :key="social.name" class="social-link"><button type="button" class="justify-center flex p-12px rounded-full overflow-hidden items-center cursor-pointer h-60px aspect-square" :aria-label="social.name + ' (demo)'" @click="notice=copy.social"><Icon :name="social.icon" size="1.25rem" /></button></li></ul><span class="social-feedback" role="status">{{ notice }}</span></div></template>
 <style scoped lang="scss">
 ul {
     column-gap: .625rem;
@@ -43,7 +17,7 @@ ul {
     }
 
     .social-link {
-        a {
+        button {
             transition: all .3s ease;
 
             // &:first-of-type {
@@ -90,3 +64,4 @@ ul {
 
 }
 </style>
+<style scoped>.demo-socials{position:relative}.social-link button{color:inherit}.social-feedback{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}</style>
