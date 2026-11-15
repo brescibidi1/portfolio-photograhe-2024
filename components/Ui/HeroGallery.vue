@@ -12,32 +12,26 @@
 const imagesUrl = [
     {
         src: '/photos/image-15.webp',
-        // src: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8f&auto=format&fit=crop&w=1170&q=80',
         class: 'image-15'
     },
     {
         src: '/photos/image-16.webp',
-        // src: 'https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8f&auto=format&fit=crop&w=1170&q=80',
         class: 'image-16'
     },
     {
         src: '/photos/image-13.webp',
-        // src: 'https://images.unsplash.com/photo-1500534623283-312aade485b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8f&auto=format&fit=crop&w=1170&q=80',
         class: 'image-13'
     },
     {
         src: '/photos/image-11.webp',
-        // src: 'https://images.unsplash.com/photo-1494526585095-c41746248156?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8f&auto=format&fit=crop&w=1170&q=80',
         class: 'image-11'
     },
     {
         src: '/photos/image-17.webp',
-        // src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8f&auto=format&fit=crop&w=1170&q=80',
         class: 'image-17'
     },
     {
         src: '/photos/image-12.webp',
-        // src: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8f&auto=format&fit=crop&w=1170&q=80',
         class: 'image-12'
     }
 ]
@@ -48,19 +42,9 @@ const imagesUrl = [
     width: 100%;
     min-width: 0;
     flex: 1 1 0%;
-    padding-inline: 10.125rem;
-
-    @media (max-width:1440px) {
-        padding-inline: 5rem;
-    }
-
-    @media (max-width:490px) {
-        padding-inline: 1rem;
-    }
-
     .pictures-container {
         width: 100%;
-        height: clamp(320px, 30vw, 720px);
+        height: clamp(340px, 34vw, 640px);
         min-width: 0;
         gap: .625rem;
         overflow: hidden;
@@ -68,7 +52,7 @@ const imagesUrl = [
         grid-template-rows: repeat(8, minmax(0, 1fr));
 
         @media (max-width:490px) {
-            height: clamp(240px, 72vw, 360px);
+            height: clamp(280px, 82vw, 400px);
             gap: 0.3275rem;
         }
 

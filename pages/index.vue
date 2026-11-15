@@ -1,9 +1,9 @@
 <template>
-    <div class="page-main w-full">
+    <div class="page-main home-page w-full">
         <!-- Section Hero -->
         <section class="hero-home-section">
             <div class="container flex-col">
-                <div class="container-content justify-between items-start flex py-5rem">
+                <div class="container-content hero-intro">
                     <div class="text-wrapper uppercase items-start">
                         <span class="--text-sp-viewable-small font-medium">
                             {{ $t('root.pages.home.content.hero.sub-text') }}
@@ -50,15 +50,15 @@
                         </UiButton>
                     </div>
                 </div>
-                <div class="container-content flex w-full overflow-hidden max-h-[710px]">
+                <div class="container-content artist-overview">
                     <div class="artist-presentation-image-box flex-1 rounded-xl overflow-hidden">
                         <img
                             src="/photos/artist.webp" alt="Artist presentation image"
                             class="w-full h-full object-cover" />
                     </div>
 
-                    <div class="flex-1 w-full flex artist-infos-block max-h-max flex-col">
-                        <div class="flex p-2 5rem h-1/2 flex-col artist-bio">
+                    <div class="flex-1 w-full flex artist-infos-block flex-col">
+                        <div class="flex flex-col artist-bio">
                             <div class="font-medium">
                                 <p>
                                     {{ $t('root.pages.home.content.about.bio.title') }}
@@ -66,7 +66,7 @@
                             </div>
                             <p class="--text-sp-viewable-small">{{ $t('root.pages.home.content.about.bio.text') }}</p>
                         </div>
-                        <div class="flex artist-contact p-2 5rem h-1/2 flex-col">
+                        <div class="flex artist-contact flex-col">
                             <div class="font-medium">
                                 <p>
                                     {{ $t('root.pages.home.content.about.contact.title') }}
@@ -185,263 +185,57 @@ const swiper = useSwiper(containerRef, {
 </script>
 
 <style scoped lang="scss">
-.page-main {
-    section {
-        &.hero-home-section {
-            >.container {
-                .container-content {
-                    &:first-child {
-                        padding: 10.125rem;
-
-                        @media (max-width:1440px) {
-                            padding: 3.75rem 5rem;
-                        }
-
-                        @media (max-width:490px) {
-                            flex-direction: column;
-                            padding: 2.5rem 1rem;
-                        }
-
-                        .text-wrapper,
-                        .content-text-element {
-                            row-gap: .625rem;
-
-                            @media (max-width: 1440px) {
-                                row-gap: .25rem;
-                            }
-                        }
-
-                        .text-wrapper {
-                            span {
-                                font-size: 1.375rem;
-                                color: var(--grey-40);
-
-                                @media (max-width:1440px) {
-                                    font-size: 1.125rem;
-                                }
-
-                                @media (max-width:991px) {
-                                    font-size: 1.125rem;
-                                }
-
-                                @media (max-width:767px) {
-                                    font-size: 2.5vw;
-                                }
-
-                                @media (max-width:490px) {
-                                    font-size: 3.58974vw;
-                                }
-                            }
-
-                            p {
-                                font-size: 5rem;
-
-                                @media (max-width:1440px) {
-                                    font-size: 3.75rem;
-                                }
-
-                                @media (max-width:991px) {
-                                    font-size: 5.25vw;
-                                }
-
-                                @media (max-width:767px) {
-                                    font-size: 6.125vw;
-                                }
-
-                                @media (max-width:490px) {
-                                    font-size: 10.2564vw;
-                                }
-                            }
-                        }
-
-                        .content-text-element {
-                            font-size: 3.625rem;
-
-                            @media (max-width:1440px) {
-                                font-size: 3rem;
-                            }
-
-                            @media (max-width:991px) {
-                                font-size: 5.25vw;
-                            }
-
-                            @media (max-width:767px) {
-                                font-size: 6.125vw;
-                            }
-
-                            @media (max-width:490px) {
-                                font-size: 7.1795vw;
-                            }
-
-                            .flex {
-                                gap: .625rem;
-                            }
-                        }
-                    }
-
-                    &:last-child {
-                        .brescibidi-template-filligrane {
-                            padding: 1.25rem;
-                            border-block: 1px solid var(--dark-12);
-                            width: 100%;
-
-                            @media (max-width:490px) {
-                                padding: 1rem;
-                                column-gap: 1rem;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        &#about-in-home.artist-presentation-section {
-
-            @media (max-width:490px) {
-                padding-block: 3.75rem 1.875rem !important;
-            }
-
-            .container {
-                .container-content {
-                    gap: 1.25rem;
-                    transition: all .3s ease-in;
-
-                    @media (max-width:1440px) {
-                        max-height: 585px;
-                    }
-
-                    @media (max-width:490px) {
-                        flex-direction: column;
-                        max-height: none;
-                    }
-
-                    .artist-infos-block {
-                        align-self: center;
-                        border: 1px solid var(--dark-12);
-                        border-radius: 1.25rem;
-
-                        >div {
-                            @media (max-width: 1440px) {
-                                padding: 1.875rem;
-                            }
-
-                            @media (max-width: 490px) {
-                                padding: 1.5rem;
-                            }
-
-                            &.artist-bio {
-                                border-bottom: .5px solid var(--dark-12);
-                                row-gap: 1.25rem;
-
-                                @media (max-width:1440px) {
-                                    row-gap: 1rem;
-                                }
-
-                                >p,
-                                span {
-                                    color: var(--grey-70);
-                                    font-size: 1.125rem;
-
-                                    @media (max-width:1440px) {
-                                        font-size: 1rem;
-                                    }
-                                }
-                            }
-
-                            &.artist-contact {
-                                border-top: .5px solid var(--dark-12);
-                                row-gap: 2.5rem;
-
-                                @media (max-width:1440px) {
-                                    row-gap: 1.875rem;
-                                }
-
-                                ul.inline-information {
-                                    column-gap: 1rem;
-                                    row-gap: .75rem;
-
-                                    .box {
-                                        row-gap: .625rem;
-
-                                        @media (max-width:1440px) {
-                                            row-gap: .375rem;
-                                        }
-                                    }
-                                }
-
-                                .artist-socials {
-                                    column-gap: 3.75rem;
-
-                                    @media (max-width:1440px) {
-                                        column-gap: 3.125rem;
-                                    }
-
-                                    @media (max-width:490px) {
-                                        column-gap: 0;
-                                        row-gap: 1.25rem;
-                                        flex-direction: column;
-                                    }
-                                }
-                            }
-
-                            &.artist-bio,
-                            &.artist-contact {
-                                >.font-medium {
-                                    color: var(--grey-80);
-                                    font-size: 1.875rem;
-
-                                    @media (max-width: 1440px) {
-                                        font-size: 1.5rem;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        &.home-portfolio-section {
-            @media (max-width:490px) {
-                padding-block: 1.875rem 7.5rem !important;
-            }
-
-            .container-content {
-                column-gap: 3.125rem;
-
-                @media (max-width: 1440px) {
-                    column-gap: 1.875rem;
-                }
-            }
-        }
-
-        &.artist-presentation-section,
-        &.home-portfolio-section {
-            padding: 5rem 10.125rem;
-
-            .container {
-                display: flex;
-                row-gap: 3.75rem;
-
-                @media (max-width:490px) {
-                    row-gap: 2.5rem;
-                }
-            }
-
-            @media (max-width:1440px) {
-                padding: 3.75rem 5rem;
-            }
-
-            @media (max-width:490px) {
-                padding: 1rem;
-            }
-        }
+.home-page {
+    &, section { transition: none; }
+    --home-gutter: clamp(1rem, 5vw, 8rem);
+    --home-space: clamp(3.5rem, 6vw, 7rem);
+    section, section > .container { width: 100%; min-width: 0; }
+    section > .container { display: flex; flex-direction: column; max-width: none; }
+    .hero-intro {
+        display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+        align-items: end; gap: 2rem;
+        padding: clamp(2.5rem, 5vw, 5rem) var(--home-gutter) clamp(2rem, 4vw, 4rem);
+        .text-wrapper { display: grid; gap: .75rem; }
+        .text-wrapper span { max-width: 29rem; font-size: clamp(.8rem, 1.2vw, 1.125rem); line-height: 1.5; color: var(--grey-50); }
+        .text-wrapper > p { font-size: clamp(3rem, 5.5vw, 6.5rem); line-height: 1; letter-spacing: -.055em; }
+        .content-text-element { gap: .2rem; font-size: clamp(1.75rem, 3.3vw, 4rem); line-height: 1.2; letter-spacing: -.045em; }
+        .content-text-element > div { gap: .75rem; }
     }
-
-    section,
-    section>.container {
-        display: flex;
-        width: 100%;
+    .brescibidi-template-filligrane { width: 100%; padding: 0 var(--home-gutter); }
+    .artist-presentation-section, .home-portfolio-section {
+        padding: var(--home-space) var(--home-gutter);
+        > .container { gap: clamp(1.5rem, 3vw, 3rem); }
+    }
+    .section-title { align-items: end; gap: 1.5rem; flex-wrap: wrap; padding-bottom: 1.5rem; }
+    .section-title .text-wrapper h1 { font-size: clamp(1.875rem, 3.5vw, 4rem); line-height: 1.1; letter-spacing: -.04em; }
+    .section-title .text-wrapper span { font-size: .875rem; letter-spacing: .06em; }
+    .section-title .link-wrapper { flex-wrap: wrap; gap: .75rem; }
+    .home-portfolio-section .section-title .buttons-wrapper { position: static; inset: auto; transform: none; gap: .5rem; }
+    .home-portfolio-section .swiper-button { height: 3rem; width: 3rem; margin: 0; }
+    .artist-overview { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); gap: clamp(1rem, 2vw, 2rem); align-items: stretch; }
+    .artist-presentation-image-box { position: relative; border-radius: 1.25rem; min-height: 32rem; }
+    .artist-presentation-image-box img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .artist-infos-block { border: 1px solid var(--dark-12); border-radius: 1.25rem; min-width: 0; align-self: stretch; }
+    .artist-bio, .artist-contact { height: auto; padding: clamp(1.25rem, 2.25vw, 2.75rem); gap: 1.25rem; }
+    .artist-bio { flex: 1; border-bottom: 1px solid var(--dark-12); }
+    .artist-bio > p { font-size: 1rem; line-height: 1.8; color: var(--grey-70); }
+    .artist-bio > .font-medium, .artist-contact > .font-medium { font-size: clamp(1.25rem, 1.7vw, 1.75rem); color: var(--grey-90); }
+    .artist-contact { gap: 1.5rem; }
+    .inline-information { gap: 1.25rem 2.5rem; }
+    .inline-information .box { gap: .375rem; }
+    .inline-information span { color: var(--grey-70); overflow-wrap: anywhere; }
+    .artist-socials { gap: 1rem; flex-wrap: wrap; align-items: center; }
+    @media (max-width: 900px) {
+        .artist-overview { grid-template-columns: 1fr; }
+        .artist-presentation-image-box { min-height: 0; height: clamp(22rem, 65vw, 36rem); }
+    }
+    @media (max-width: 650px) {
+        .hero-intro { grid-template-columns: 1fr; gap: 1.5rem; }
+        .hero-intro .text-wrapper > p { font-size: clamp(3rem, 12vw, 4.5rem); }
+        .hero-intro .content-text-element { font-size: clamp(1.75rem, 6.5vw, 2.75rem); }
+        .section-title { align-items: start; }
+        .section-title .link-wrapper { width: 100%; justify-content: space-between; }
+        .artist-contact .artist-socials { flex-direction: column; align-items: start; }
     }
 }
 </style>

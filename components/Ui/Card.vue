@@ -37,18 +37,22 @@ defineProps({
 
     .portfolio-media-box {
         border-radius: .75rem;
+        aspect-ratio: 1 / 1.05;
+        width: 100%;
 
         img {
             display: block;
             height: 100%;
-            height: 470px;
+            min-height: 0;
             width: 100%;
             object-fit: cover;
         }
     }
 
     .media-infos-container {
-        column-gap: 1.25rem;
+        column-gap: .75rem;
+        .media-title-block { min-width: 0; }
+        .media-location { flex-shrink: 0; font-size: .8rem; }
 
         .media-title-block {
             row-gap: .25rem;

@@ -73,6 +73,6 @@ Une interface de portfolio pour un photographe fictif, intégrée avec Nuxt et V
 
 ### Mouvement et responsive
 
-GSAP anime les titres et la mosaïque à l’arrivée, puis les sections au défilement. Les animations respectent la préférence de réduction des mouvements et sont nettoyées à chaque navigation. Le survol des photos garde un zoom léger.
+GSAP anime les titres à l’arrivée. La mosaïque se dévoile photo par photo lorsqu’elle entre dans le champ, puis ses images se déplacent légèrement avec le défilement. La présentation et les cartes du portfolio ont leur propre séquence d’entrée. Les animations respectent la préférence de réduction des mouvements et sont nettoyées à chaque navigation. Le survol des photos garde un zoom léger.
 
 Les carrousels adaptent le nombre de photos à leur propre largeur : une sous 600 px, deux dès 600 px, trois dès 1 000 px. Les flèches indiquent les limites du carrousel.
