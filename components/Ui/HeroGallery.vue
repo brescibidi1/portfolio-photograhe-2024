@@ -1,6 +1,6 @@
 <template>
     <div class="gallery-hero-section">
-        <div class="pictures-container grid relative w-full h-[512px] max-w-[90vw]">
+        <div class="pictures-container grid relative">
             <div v-for="(image, index) in imagesUrl" :key="index" :class="['column relative', image.class]">
                 <img :src="image.src" :alt="`Photo de démonstration ${index + 1}`" decoding="async" :class="''" />
             </div>
@@ -45,6 +45,9 @@ const imagesUrl = [
 
 <style scoped lang="scss">
 .gallery-hero-section {
+    width: 100%;
+    min-width: 0;
+    flex: 1 1 0%;
     padding-inline: 10.125rem;
 
     @media (max-width:1440px) {
@@ -56,13 +59,16 @@ const imagesUrl = [
     }
 
     .pictures-container {
+        width: 100%;
+        height: clamp(320px, 30vw, 720px);
+        min-width: 0;
         gap: .625rem;
         overflow: hidden;
-        grid-template-columns: repeat(15, 1fr);
-        grid-template-rows: repeat(8, 1fr);
+        grid-template-columns: repeat(15, minmax(0, 1fr));
+        grid-template-rows: repeat(8, minmax(0, 1fr));
 
         @media (max-width:490px) {
-            height: auto;
+            height: clamp(240px, 72vw, 360px);
             gap: 0.3275rem;
         }
 
@@ -93,7 +99,7 @@ const imagesUrl = [
             &.image-15 {
                 grid-column: 1 / 6;
                 grid-row: 1 / 7;
-                transition: all .3s ease;
+
 
                 &::after {
                     bottom: 0;
@@ -159,6 +165,4 @@ const imagesUrl = [
         }
     }
 }
-</style>
-<style scoped>@media(max-width:490px){.gallery-hero-section .pictures-container{height:clamp(240px,72vw,360px)}}
 </style>

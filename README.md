@@ -70,3 +70,9 @@ Catégorie : **Expérimentations**.
 Titre proposé : **Une intégration de portfolio pour photographe**.
 
 Une interface de portfolio pour un photographe fictif, intégrée avec Nuxt et Vue à partir d’une maquette Figma. J’y ai travaillé les galeries, les carrousels et la présentation des images sur desktop et mobile. Les visuels ont été générés avec l’IA de Freepik. Le site se parcourt en français et en anglais ; le formulaire de contact reste une simulation.
+
+### Mouvement et responsive
+
+GSAP anime les titres et la mosaïque à l’arrivée, puis les sections au défilement. Les animations respectent la préférence de réduction des mouvements et sont nettoyées à chaque navigation. Le survol des photos garde un zoom léger.
+
+Les carrousels adaptent le nombre de photos à leur propre largeur : une sous 600 px, deux dès 600 px, trois dès 1 000 px. Les flèches indiquent les limites du carrousel.

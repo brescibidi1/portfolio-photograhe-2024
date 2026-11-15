@@ -4,3 +4,17 @@ body{overflow-x:clip}a:focus-visible,button:focus-visible,input:focus-visible,te
 .demo-credit{font-size:.75rem;color:var(--grey-50);padding:1rem 0;line-height:1.7}.demo-coordinates-note{font-size:.75rem;color:var(--grey-50)}
 @media(max-width:700px){.demo-form-grid{grid-template-columns:1fr}.artist-homepage-portfolio-view{display:block!important;min-width:0;width:100%}.artist-homepage-portfolio-section .section-title .link-wrapper{flex-wrap:wrap;gap:1rem}.artist-homepage-portfolio-section .section-title{gap:1.5rem}.artist-presentation-section .artist-socials{gap:1rem;flex-wrap:wrap}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation:none!important;transition:none!important}}
+
+/* Flex items must shrink to the viewport before Swiper measures its slides. */
+.page-main, .page-main > section, .page-main > section > .container, .container-content { min-width: 0; }
+swiper-container { display: block; width: 100%; max-width: 100%; min-width: 0; flex: 1 1 0%; }
+swiper-slide { min-width: 0; height: auto; }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .portfolio-media-box img { transition: transform .7s cubic-bezier(.2,.7,.2,1); }
+  .portfolio-element-card:hover .portfolio-media-box img { transform: scale(1.035); }
+  .swiper-button { transition: background-color .2s, transform .2s; }
+  .swiper-button:hover { background-color: var(--dark-20); transform: translateY(-2px); }
+}
+
+/* Undo UnoCSS container caps: these sections already own their side gutters. */
+.page-main > section > .container { max-width: none; }
